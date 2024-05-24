@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { ComponentContext } from '@ixon-cdk/types';
-  import { durationToformattedTimeStamp } from './utils/format';
+  import { durationToFormattedTimeStamp } from './utils/format';
   import { mapMetricInputToQuery } from './utils/query';
 
   export let context: ComponentContext;
@@ -68,7 +68,7 @@
       const isNum = typeof metricValue === 'number';
       if (isNum) {
         calculatedValue = metricValue;
-        text = durationToformattedTimeStamp(metricValue);
+        text = durationToFormattedTimeStamp(metricValue, false);
       } else {
         error = 'NaN';
       }
