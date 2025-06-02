@@ -19,7 +19,7 @@
   $: hasHeader = header && (header.title || header.subtitle) && !isShallow;
   $: isShallow = height !== null ? height <= 60 : false;
   $: header = context ? context.inputs.header : undefined;
-  $: scaledTextStyle = `fill: ${textColor || 'inherit'}`;
+  $: scaledTextStyle = `fill: ${textColor || 'currentcolor'}`;
 
   const cardContentTextStyle = 'color: ' + textColor;
 
